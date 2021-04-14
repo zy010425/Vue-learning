@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>filmMobile</title>
+    <!-- 0.先引入vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  </head>
+  <body>
+    <!--1.做界面 -->
+      <div id="app1">
+      <button @click="minus">-</button>
+      <span>{{n}}</span>
+      <button @click="add">+</button>
+    </div>
+  </body>
+    
+  <script>
+    //2.定义  M  数据
+    var data ={n:0};
+   
+    //3.创建一个Vue示例
+     var vm = new Vue({
+     
+      el: "#app1", 
+      data: {n:12}, 
+      methods:{
+        minus() {
+         this.n--;
+        },
+        add() {
+          this.n++; //等同于this.data.n++
+        },
+      },
+    });
+  </script>
+</html>
