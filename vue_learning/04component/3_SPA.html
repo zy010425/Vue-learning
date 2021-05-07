@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+ <!--0:引入 vue.js-->
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ <!--0:引入 vue-router.js-->
+ <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+ <!-- 引入组价 -->
+ <script src="3_index.js"></script>
+ <script src="3_detail.js"></script>
+ <script src="3_product.js"></script>
+ <script src="3_not_found.js"></script> 
+ <!-- 引入自义定路由器（包含）了路由字典 -->
+ <script src="3_router.js"></script> 
+
+ <script src="3_my_header.js"></script> 
+</head>
+<body>
+
+  <!--界面-->
+  <div id="app">
+      <my-header></my-header>
+      <router-view></router-view>
+  </div>
+  <script>
+
+      var vm=new Vue({
+          //界面
+          el:"#app",
+          data:{
+
+          },
+          //方法
+          methods:{
+
+          },
+          router,
+      })
+  
+  </script>
+</body>
+</html>
